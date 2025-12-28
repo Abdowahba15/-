@@ -283,6 +283,127 @@ body.dark-mode .download-btn:hover {
     }
 }
 
-.potato {
-  color: var(--primary-blue);
+/* --- تنسيق صفحة المكتبة (الواجهة) --- */
+
+/* الشبكة الحاوية للكروت */
+.novels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 20px;
+    margin-top: -60px; /* لرفع الكروت قليلاً فوق الخلفية */
+    position: relative;
+    z-index: 10;
+}
+
+/* تصميم الكارت نفسه */
+.novel-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* تأثير عند مرور الماوس على الكارت */
+.novel-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 51, 102, 0.25);
+}
+
+/* الرابط المحيط بالكارت */
+.novel-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* حاوية الصورة (لضمان شكل موحد) */
+.card-image {
+    width: 100%;
+    height: 380px;
+    background-color: #f4f7f6; /* خلفية رمادية فاتحة جداً */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* تنسيق صورة الغلاف داخل الكارت */
+.card-image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* ظل للكتاب نفسه */
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+/* تكبير بسيط للغلاف عند الوقوف عليه */
+.novel-card:hover .card-image img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+/* معلومات الرواية أسفل الصورة */
+.card-info {
+    padding: 25px;
+    text-align: center;
+    background: white;
+    flex-grow: 1; /* لجعل النصوص تأخذ باقي المساحة */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info h3 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.card-info p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* الشارة "اقرأ الآن" */
+.read-badge {
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.novel-card:hover .read-badge {
+    background-color: var(--primary-blue);
+}
+
+/* --- تعديلات الوضع الليلي للواجهة --- */
+body.dark-mode .novel-card {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .card-image {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .card-info h3 {
+    color: #fff;
+}
+
+body.dark-mode .card-info p {
+    color: #bbb;
 }
