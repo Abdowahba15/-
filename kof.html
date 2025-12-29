@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خوف | القراءة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">خوف</div>
+        <ul class="nav-links">
+            <li><a href="index.html">العودة للمكتبة</a></li> <li><button id="theme-toggle">الوضع الليلي</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="book-cover-container">
+                <img src="kof-cover.webp" alt="غلاف رواية خوف" class="book-cover">
+            </div>
+            <h1 class="animate-text">خوف</h1>
+            <p class="animate-text-delay">تأليف: محمد مسلم</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="reading-area">
+            <h2 class="chapter-title">المقدمة</h2>
+            <div id="novel-content" class="novel-body">
+               "هل تساءلت يوماً ماذا يحدث خلف الستار الفاصل بين عالمنا وعالمهم؟ في رواية (خوف)، يقرر بطلنا أن يخطو الخطوة التي يخشاها الجميع؛ أن يفتح الباب الذي أُغلق بالأقفال والطلاسم. هنا، لا مكان للشجعان بالصدفة، بل لمن يملك الجرأة على مواجهة الحقيقة العارية. استعد، فبمجرد أن تبدأ في تقليب الصفحات، لن تعود كما كنت، لأن الخوف ليس مجرد شعور.. بل هو كيان ينتظرك في الداخل."
+            </div>
+            
+            <div class="reading-tools">
+                <button onclick="changeFontSize(1)">تكبير الخط +</button>
+                <button onclick="changeFontSize(-1)">تصغير الخط -</button>
+                <a href="kof.pdf" download="kof.pdf" class="download-btn">
+                    تحميل الرواية (PDF) 📥
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
